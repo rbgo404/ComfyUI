@@ -9,7 +9,7 @@ class InferlessPythonModel:
     def initialize(self):
         self.directory_path = os.getenv('NFS_VOLUME')
         if not os.path.exists(self.directory_path+"/ComfyUI"):
-            subprocess.run(["wget", "https://github.com/inferless/ComfyUI-Inferless-template/raw/main/build.sh"])
+            subprocess.run(["wget", "https://github.com/rbgo404/ComfyUI/raw/comfy-cli/build.sh"])
             subprocess.run(["bash", "build.sh"], check=True)
           
         self._data_dir = self.directory_path+"/workflows"
